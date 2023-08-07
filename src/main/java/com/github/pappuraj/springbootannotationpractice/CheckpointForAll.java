@@ -2,6 +2,7 @@ package com.github.pappuraj.springbootannotationpractice;
 
 import com.github.pappuraj.springbootannotationpractice.autowired.Autowired_DesktopComponent;
 import com.github.pappuraj.springbootannotationpractice.component.Component_Engineer;
+import com.github.pappuraj.springbootannotationpractice.qualifier.controller.Qualifier;
 import org.springframework.context.ApplicationContext;
 
 public class CheckpointForAll {
@@ -27,7 +28,14 @@ public class CheckpointForAll {
     public  void autowired(){
         Autowired_DesktopComponent desktop=context.getBean(Autowired_DesktopComponent.class);
         desktop.getSsd().getSSD();
+    }
+
+
+    public  void qualifier(){
+        Qualifier qualifier=context.getBean(Qualifier.class);
+        qualifier.getHuman().viewName();
 
     }
+
 
 }

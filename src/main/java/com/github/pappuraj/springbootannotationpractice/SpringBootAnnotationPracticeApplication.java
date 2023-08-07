@@ -22,7 +22,8 @@ public class SpringBootAnnotationPracticeApplication {
         checkpoint=new CheckpointForAll(context);
 
         //checkpoint.component();
-        checkpoint.autowired();
+        //checkpoint.autowired();
+        //checkpoint.qualifier();
     }
 
 
