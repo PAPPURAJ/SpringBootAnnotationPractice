@@ -1,7 +1,10 @@
 package com.github.pappuraj.springbootannotationpractice;
 
 import com.github.pappuraj.springbootannotationpractice.autowired.Autowired_DesktopComponent;
+import com.github.pappuraj.springbootannotationpractice.bean.Arduino;
 import com.github.pappuraj.springbootannotationpractice.component.Component_Engineer;
+//import com.github.pappuraj.springbootannotationpractice.primary.controller.Primary;
+import com.github.pappuraj.springbootannotationpractice.primary.Primary;
 import com.github.pappuraj.springbootannotationpractice.qualifier.controller.Qualifier;
 import org.springframework.context.ApplicationContext;
 
@@ -34,6 +37,20 @@ public class CheckpointForAll {
     public  void qualifier(){
         Qualifier qualifier=context.getBean(Qualifier.class);
         qualifier.getHuman().viewName();
+
+    }
+
+    public  void primary(){
+        Primary primary=context.getBean(Primary.class);
+        primary.getHuman().viewName();
+
+    }
+
+    public  void bean(){
+        // Arduino bean=context.getBean(Arduino.class);
+        // Arduino bean=context.getBean("getArduino",Arduino.class);
+        Arduino bean=context.getBean("ar2",Arduino.class);
+        bean.display();
 
     }
 
